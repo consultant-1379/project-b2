@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!---css linked here -->
+    <link rel="stylesheet" href="main.css" type="text/css" media="screen, projection"/>
+    <title>OWASP TOP 10</title>
+</head>
+<body>
+<h1>OWASP TOP 10 REPORT</h1>
+
+<form action="/search" method="GET" >
+    <input type="text" name="name" string="project-name" placeholder="Enter project-name">
+    <button type="submit">Generate Report</button>
+</form>
+</body>
+</html>

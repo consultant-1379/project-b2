@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!---css linked here -->
+    <link rel="stylesheet" href="main.css" type="text/css" media="screen, projection"/>
+    <title>OWASP TOP 10</title>
+</head>
+<body>
+        <h1>OWASP TOP 10 REPORT</h1>
+        <h2 th:text="${name}"></h2>
+
+        <table class = "content-table">
+            <tr>
+                <th>Category</th>
+                <th>Blocker</th>
+                <th>Major</th>
+                <th>Minor</th>
+                <th>Info</th>
+                <th>Critical</th>
+                <th>Security Hotspot</th>
+            </tr>
+            <tr>
+                <td>A1-Injection</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(0)}"/></td>
+                   <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(0)}"/></td>
+                   <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(0)}"/></td>
+                   <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(0)}"/></td>
+                   <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(0)}"/></td>
+                   <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(0)}"/></td>
+
+            </tr>
+            <tr>
+                <td>A2-Broken Authentication</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(1)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(1)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(1)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(1)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(1)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(1)}"/></td>
+            </tr>
+            <tr>
+                <td>A3-Sensitive Data Exposure</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(2)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(2)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(2)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(2)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(2)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(2)}"/></td>
+            </tr>
+            <tr>
+                <td>A4-XML External Entities</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(3)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(3)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(3)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(3)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(3)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(3)}"/></td>
+            </tr>
+            <tr>
+                <td>A5-Broken Access Control</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(4)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(4)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(4)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(4)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(4)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(4)}"/></td>
+            </tr>
+            <tr>
+                <td>A6-Security Misconfiguration</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(5)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(5)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(5)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(5)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(5)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(5)}"/></td>
+            </tr>
+            <tr>
+                <td>A7-Cross-Site Scripting</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(6)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(6)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(6)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(6)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(6)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(6)}"/></td>
+            </tr>
+            <tr>
+                <td>A8-Insecure Deserialization</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(7)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(7)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(7)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(7)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(7)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(7)}"/></td>
+            </tr>
+            <tr>
+                <td>A9-Using Components with Known Vulnerabilities</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(8)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(8)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(8)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(8)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(8)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(8)}"/></td>
+            </tr>
+            <tr>
+                <td>A10-Insufficient Loging & Monitoring</td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).BLOCKER).get(9)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MAJOR).get(9)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).MINOR).get(9)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).INFO).get(9)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).CRITICAL).get(9)}"/></td>
+                <td><p th:text="${issues.get(T(com.ericsson.securityassessment.Severity).SECURITY_HOTSPOT).get(9)}"/></td>
+            </tr>
+                    </table>
+            </body>
+            </html>

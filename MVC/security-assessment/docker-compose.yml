@@ -1,0 +1,24 @@
+version: "3"
+services:
+  mysqldb:
+    image: mysql/mysql-server:8.0
+    networks:
+      - mynetwork
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: security_db
+
+  security-jdbc:
+    depends_on:
+      - mysqldb
+    image: security
+    networks:
+      - mynetwork
+    container_name: security-jdbc
+    ports:
+      - "8080:8080"
+
+networks:
+  mynetwork:
